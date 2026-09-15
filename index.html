@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scarlenny Guaragna | Cybersecurity Portfolio</title>
+<style>
+  :root {
+    --ink: #10151c;
+    --muted: #414b57;
+    --accent: #0b3b6f;
+    --rule: #c9d2dc;
+    --bg: #ffffff;
+    --panel: #f4f7fa;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 46rem; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:hover { text-decoration-thickness: 2px; }
+  a:focus-visible,
+  .skip:focus {
+    outline: 3px solid #b4341f;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+  .skip {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: var(--bg);
+    padding: 0.5rem 0.75rem;
+    border: 2px solid var(--accent);
+  }
+  .skip:focus { left: 0.5rem; top: 0.5rem; z-index: 10; }
+  header { border-bottom: 3px solid var(--accent); padding-bottom: 1rem; margin-bottom: 1.5rem; }
+  h1 { font-size: clamp(1.7rem, 5vw, 2.4rem); margin: 0 0 0.25rem; line-height: 1.2; }
+  .tagline { color: var(--muted); margin: 0 0 0.75rem; font-size: 1.05rem; }
+  nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; padding: 0; margin: 0; }
+  h2 { font-size: 1.3rem; margin: 2.25rem 0 0.5rem; color: var(--accent); }
+  h3 { font-size: 1.05rem; margin: 1.25rem 0 0.2rem; }
+  p, li { overflow-wrap: break-word; }
+  .meta { color: var(--muted); margin: 0 0 0.4rem; font-size: 0.95rem; }
+  ul.body { margin: 0.3rem 0 0; padding-left: 1.2rem; }
+  .card {
+    background: var(--panel);
+    border-left: 5px solid var(--accent);
+    padding: 0.85rem 1rem;
+    margin: 1rem 0;
+    border-radius: 0 6px 6px 0;
+  }
+  .status {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0.15rem 0.5rem;
+    border-radius: 3px;
+    background: #0b3b6f;
+    color: #ffffff;
+  }
+  .status.progress { background: #6a4a00; }
+  .note { font-size: 0.9rem; color: var(--muted); border-top: 1px solid var(--rule); margin-top: 0.75rem; padding-top: 0.5rem; }
+  footer { margin-top: 3rem; border-top: 1px solid var(--rule); padding-top: 1rem; color: var(--muted); font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<div class="wrap">
+
+<header>
+  <h1>Scarlenny Guaragna</h1>
+  <p class="tagline">Cybersecurity student at Alvernia University, seeking a cybersecurity internship</p>
+  <nav aria-label="Section navigation">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#service">Work and Service</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+<section id="about">
+  <h2>About</h2>
+  <p>I am a cybersecurity major at Alvernia University, expecting my B.S. in May 2028. Before college I served four years in the United States Navy as a Builder Third Class, and I worked as a home health aide in Brooklyn. My first technical training was a high school technical track in the Dominican Republic that covered programming, databases, and web pages. I am now working toward an internship where I can put database and compliance work to use.</p>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+
+  <h3>Alvernia University, Reading, PA</h3>
+  <p class="meta">B.S. Cybersecurity, expected May 2028</p>
+
+  <h3>Reading Area Community College, Reading, PA</h3>
+  <p class="meta">A.S. Science Transfer, May 2024</p>
+
+  <h3>Integral Nuestra Senora de Fatima, Santiago, Dominican Republic</h3>
+  <p class="meta">High School Diploma with technical track, 2011</p>
+  <ul class="body">
+    <li>Technical coursework: Programming II, Systems, Corporative Database, Web Pages, Internet Services, Applied Data Entry I and II</li>
+    <li>Business and compliance coursework: Small Business, Legislation and Ethics</li>
+  </ul>
+  <p class="note">Course and credential titles above are quoted exactly from my notarized English transcript translation. As a native Spanish speaker I consider the translation of the track title inaccurate, and I am pursuing a corrected translation rather than restating the credential here.</p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <h3>Technical</h3>
+  <ul class="body">
+    <li>SQL and PostgreSQL</li>
+    <li>pgAdmin 4</li>
+    <li>Relational schema and entity relationship diagram design</li>
+  </ul>
+  <h3>Currently developing</h3>
+  <ul class="body">
+    <li>Linux and Kali command line, Bash scripting</li>
+    <li>Windows and PowerShell, VirtualBox</li>
+    <li>Python, Git, Wireshark, networking fundamentals</li>
+  </ul>
+  <h3>Compliance and records</h3>
+  <ul class="body">
+    <li>HIPAA and Privacy Act training</li>
+    <li>Department of the Navy records management</li>
+    <li>DoD Cyber Awareness Challenge, OPSEC</li>
+  </ul>
+  <h3>Languages</h3>
+  <ul class="body">
+    <li>Spanish (native), English</li>
+    <li>French, Japanese, Italian (beginner)</li>
+  </ul>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="card">
+    <h3 style="margin-top:0">Bibliophile's Haven, PostgreSQL Bookstore Database</h3>
+    <p class="meta"><span class="status">Completed</span></p>
+    <ul class="body">
+      <li>Designed a five-table relational schema and produced an entity relationship diagram</li>
+      <li>Wrote six SQL queries against the schema</li>
+      <li>Built in PostgreSQL using pgAdmin 4</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0">AI 101 Lab 3 Portfolio</h3>
+    <p class="meta"><span class="status progress">In Progress</span></p>
+    <ul class="body">
+      <li>Building this single-file, mobile-responsive portfolio page with all CSS inline and no external dependencies</li>
+      <li>Auditing AI-generated drafts against my own transcripts and service records before anything is published</li>
+    </ul>
+  </div>
+</section>
+
+<section id="service">
+  <h2>Work and Service</h2>
+
+  <h3>United States Navy, Builder Third Class (BU3)</h3>
+  <p class="meta">Port Hueneme, CA | December 2016 to June 2020</p>
+  <ul class="body">
+    <li>Performed pre-deployment preparation and project planning and estimating of construction materials</li>
+    <li>Inventoried and classified underwater construction equipment with Underwater Construction Team 2</li>
+    <li>Transported 15 personnel a total of 390 miles to LAX in support of battalion deployment readiness</li>
+    <li>Served as Voluntary Education Coordinator and stood POOW and MOOW watches</li>
+    <li>Informally supervised a work party; no formal direct reports on record</li>
+  </ul>
+
+  <h3>Heart to Heart Home Care, Home Health Aide</h3>
+  <p class="meta">Brooklyn, NY | 2020 to 2022</p>
+  <ul class="body">
+    <li>Scheduled appointments and arranged client transportation</li>
+    <li>Monitored vital signs and referred concerns to healthcare professionals</li>
+    <li>Prepared daily activity reports and maintained client confidentiality</li>
+  </ul>
+
+  <h3>Freedom Care LLC, Personal Care Assistant</h3>
+  <p class="meta">Brooklyn, NY | March to December 2016</p>
+  <ul class="body">
+    <li>Coordinated with physicians, nurses, and therapists on client care</li>
+    <li>Documented activities for case management and compliance</li>
+    <li>Assisted clients with daily activities and dietary needs</li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  <p>Code and coursework: <a href="https://github.com/scarlenny">github.com/scarlenny</a></p>
+  <p>No performance metrics are claimed on this page. The only figures shown (15 personnel, 390 miles) are taken directly from my October 2019 Navy brag sheet.</p>
+</footer>
+
+</div>
+</body>
+</html>
