@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://scarlenny.github.io/ai101-portfolio/schema.json",
+  "title": "Approved Fact Sheet",
+  "description": "Validates the STRUCTURE of resume.json. It cannot validate whether any statement inside it is true.",
+  "type": "object",
+  "required": ["name", "targetOpportunity", "education", "projects", "skills"],
+  "additionalProperties": true,
+  "properties": {
+    "name": { "type": "string", "minLength": 1 },
+    "targetOpportunity": { "type": "string" },
+    "specificPosting": { "type": "string" },
+    "links": {
+      "type": "object",
+      "properties": {
+        "github": { "type": "string", "format": "uri" }
+      }
+    },
+    "education": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["institution", "credential", "status"],
+        "properties": {
+          "institution": { "type": "string" },
+          "location": { "type": "string" },
+          "credential": { "type": "string" },
+          "status": { "enum": ["completed", "in progress", "planned"] },
+          "completed": { "type": "string" },
+          "expectedCompletion": { "type": "string" },
+          "gpa": {
+            "type": ["number", "null"],
+            "minimum": 0,
+            "maximum": 4,
+            "description": "null means unknown. A schema cannot tell the difference between an unknown GPA and an invented one."
+          },
+          "courses": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "projects": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["title", "status"],
+        "properties": {
+          "title": { "type": "string" },
+          "status": { "enum": ["completed", "in progress", "planned"] },
+          "tools": { "type": "array", "items": { "type": "string" } },
+          "actions": { "type": "array", "items": { "type": "string" } },
+          "measuredOutcome": {
+            "type": ["string", "null"],
+            "description": "null means no measured outcome exists. The schema will accept any string placed here, including a fabricated percentage."
+          }
+        }
+      }
+    },
+    "workOrService": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["organization", "title"],
+        "properties": {
+          "organization": { "type": "string" },
+          "title": { "type": "string" },
+          "location": { "type": "string" },
+          "start": { "type": "string" },
+          "end": { "type": "string" },
+          "actions": { "type": "array", "items": { "type": "string" } },
+          "formalDirectReports": { "type": "integer", "minimum": 0 }
+        }
+      }
+    },
+    "skills": {
+      "type": "object",
+      "properties": {
+        "technical": { "type": "array", "items": { "type": "string" } },
+        "currentlyDeveloping": { "type": "array", "items": { "type": "string" } },
+        "complianceAndRecords": { "type": "array", "items": { "type": "string" } },
+        "languages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["language", "level"],
+            "properties": {
+              "language": { "type": "string" },
+              "level": { "enum": ["native", "fluent", "professional", "intermediate", "beginner"] }
+            }
+          }
+        }
+      }
+    },
+    "questionsToResolve": { "type": "array", "items": { "type": "string" } },
+    "measuredOutcomesAvailable": { "type": "boolean" }
+  }
+}
